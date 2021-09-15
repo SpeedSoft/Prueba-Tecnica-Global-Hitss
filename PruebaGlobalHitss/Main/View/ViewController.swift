@@ -10,12 +10,22 @@ import UIKit
 class ViewController: UIViewController {
     var movies = [Movie]()
     @IBOutlet weak var collectViewMovies: UICollectionView!
+    var vmListMovie = VMListMovie()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        collectViewMovies.dataSource = self
+        configureView()
+        
     }
-
+    private func configureView(){
+        collectViewMovies.dataSource = self
+        
+    }
+    private func bind(){
+        vmListMovie.bindListMovieViewModelToController = { [weak self] () in
+            
+        }
+    }
 
 }
 
