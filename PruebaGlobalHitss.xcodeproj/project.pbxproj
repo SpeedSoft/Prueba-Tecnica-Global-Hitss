@@ -19,6 +19,7 @@
 		CC5FA78526F1A4A400ABA1A5 /* MovieCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FA78426F1A4A400ABA1A5 /* MovieCollectionViewCell.swift */; };
 		CC60281226F213A000176F95 /* RequestTopRateMovie.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60281126F213A000176F95 /* RequestTopRateMovie.swift */; };
 		CC60281626F21D0600176F95 /* VMListaMovies.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60281526F21D0600176F95 /* VMListaMovies.swift */; };
+		CC60281A26F2299A00176F95 /* getImageUrl+UIImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC60281926F2299A00176F95 /* getImageUrl+UIImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +58,7 @@
 		CC5FA78426F1A4A400ABA1A5 /* MovieCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieCollectionViewCell.swift; sourceTree = "<group>"; };
 		CC60281126F213A000176F95 /* RequestTopRateMovie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestTopRateMovie.swift; sourceTree = "<group>"; };
 		CC60281526F21D0600176F95 /* VMListaMovies.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VMListaMovies.swift; sourceTree = "<group>"; };
+		CC60281926F2299A00176F95 /* getImageUrl+UIImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "getImageUrl+UIImageView.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +109,7 @@
 		CC5FA74C26F1988B00ABA1A5 /* PruebaGlobalHitss */ = {
 			isa = PBXGroup;
 			children = (
+				CC60281726F2294800176F95 /* Utilities */,
 				CC5FA78126F1993100ABA1A5 /* Main */,
 				CC5FA74D26F1988B00ABA1A5 /* AppDelegate.swift */,
 				CC5FA74F26F1988B00ABA1A5 /* SceneDelegate.swift */,
@@ -194,6 +197,22 @@
 			children = (
 			);
 			path = Request;
+			sourceTree = "<group>";
+		};
+		CC60281726F2294800176F95 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				CC60281826F2296600176F95 /* Extencions */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		CC60281826F2296600176F95 /* Extencions */ = {
+			isa = PBXGroup;
+			children = (
+				CC60281926F2299A00176F95 /* getImageUrl+UIImageView.swift */,
+			);
+			path = Extencions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -331,6 +350,7 @@
 				CC5FA78526F1A4A400ABA1A5 /* MovieCollectionViewCell.swift in Sources */,
 				CC60281626F21D0600176F95 /* VMListaMovies.swift in Sources */,
 				CC5FA75026F1988B00ABA1A5 /* SceneDelegate.swift in Sources */,
+				CC60281A26F2299A00176F95 /* getImageUrl+UIImageView.swift in Sources */,
 				CC60281226F213A000176F95 /* RequestTopRateMovie.swift in Sources */,
 				CC5FA78326F19D7500ABA1A5 /* ResponseTopRate.swift in Sources */,
 			);
