@@ -28,12 +28,17 @@ class ViewController: UIViewController {
             }
         }
     }
-
+    
 }
 
 extension ViewController:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        vmListMovie.empData.results.count
+        if (vmListMovie.empData == nil){
+           return 0
+        }else{
+            return vmListMovie.empData.results.count
+        }
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {

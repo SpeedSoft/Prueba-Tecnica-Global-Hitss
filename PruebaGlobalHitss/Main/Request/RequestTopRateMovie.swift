@@ -17,7 +17,7 @@ class APIService :  NSObject {
             if let data = data {
                 let jsonDecoder = JSONDecoder()
                 let empData = try! jsonDecoder.decode(ResponseTopRate.self, from: data)
-                    completion(empData)
+                completion(empData)
             }
         }.resume()
     }
