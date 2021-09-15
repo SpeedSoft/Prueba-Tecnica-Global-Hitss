@@ -21,29 +21,29 @@
                                 <rect key="frame" x="0.0" y="44" width="414" height="809"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="pQ3-ZD-Kla">
-                                    <size key="itemSize" width="206" height="298"/>
-                                    <size key="estimatedItemSize" width="200" height="399"/>
+                                    <size key="itemSize" width="152" height="248"/>
+                                    <size key="estimatedItemSize" width="150" height="250"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                     <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                 </collectionViewFlowLayout>
                                 <cells>
                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="MovieCollectionViewCell" id="8nO-2H-axE" customClass="MovieCollectionViewCell" customModule="PruebaGlobalHitss" customModuleProvider="target">
-                                        <rect key="frame" x="104" y="0.0" width="206" height="298"/>
+                                        <rect key="frame" x="0.0" y="0.0" width="152" height="248"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="B7C-Lc-mvK">
-                                            <rect key="frame" x="0.0" y="0.0" width="206" height="298"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="152" height="248"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="SxD-ak-wBM">
-                                                    <rect key="frame" x="0.0" y="0.0" width="206" height="244"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="152" height="194"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="245" id="1fZ-Wl-kcI"/>
                                                         <constraint firstAttribute="width" constant="231" id="AeV-1b-gXX"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="hsafasas sfdax af asfa sfdas fs fs df" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TBK-xC-BXk">
-                                                    <rect key="frame" x="5" y="252" width="196" height="41"/>
+                                                    <rect key="frame" x="5" y="202" width="142" height="41"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="41" id="RCQ-Sa-pvl"/>
                                                     </constraints>
@@ -62,7 +62,7 @@
                                                 <constraint firstItem="SxD-ak-wBM" firstAttribute="leading" secondItem="B7C-Lc-mvK" secondAttribute="leading" id="z65-I6-GjB"/>
                                             </constraints>
                                         </collectionViewCellContentView>
-                                        <size key="customSize" width="206" height="298"/>
+                                        <size key="customSize" width="152" height="248"/>
                                         <connections>
                                             <outlet property="ImgMovie" destination="SxD-ak-wBM" id="AQg-uQ-iVC"/>
                                             <outlet property="lblMovie" destination="TBK-xC-BXk" id="afo-RV-UNt"/>

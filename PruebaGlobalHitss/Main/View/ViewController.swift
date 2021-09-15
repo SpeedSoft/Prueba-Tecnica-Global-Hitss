@@ -19,7 +19,6 @@ class ViewController: UIViewController {
     }
     private func configureView(){
         collectViewMovies.dataSource = self
-        
     }
     private func bind(){
         vmListMovie.bindListMovieViewModelToController = { [weak self] () in
@@ -28,27 +27,22 @@ class ViewController: UIViewController {
             }
         }
     }
-    
 }
 
 extension ViewController:UICollectionViewDataSource{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        if (vmListMovie.empData == nil){
-           return 0
+        if (vmListMovie.moviesData == nil){
+            return 0
         }else{
-            return vmListMovie.empData.results.count
+            return vmListMovie.moviesData.results.count
         }
-        
     }
-    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "MovieCollectionViewCell", for: indexPath) as! MovieCollectionViewCell
-        cell.lblMovie.text = vmListMovie.empData.results[indexPath.row].title
-        let strMovie:String = "https://www.themoviedb.org/t/p/w220_and_h330_face/\(vmListMovie.empData.results[indexPath.row].posterPath)"
+        cell.lblMovie.text = "\(vmListMovie.moviesData.results[indexPath.row].title)   \(String(vmListMovie.moviesData.results[indexPath.row].voteAverage))"
+        let strMovie:String = "https://www.themoviedb.org/t/p/w220_and_h330_face/\(vmListMovie.moviesData.results[indexPath.row].posterPath)"
         let urlMovie = URL(string:strMovie.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!)!
         cell.ImgMovie.load(url: urlMovie)
         return cell
     }
-    
-    
 }

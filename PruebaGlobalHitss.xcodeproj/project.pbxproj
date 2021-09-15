@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		30E6984926F2403B0053B67E /* VariableConstans.swift in Sources */ = {isa = PBXBuildFile; fileRef = 30E6984826F2403B0053B67E /* VariableConstans.swift */; };
 		CC5FA74E26F1988B00ABA1A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FA74D26F1988B00ABA1A5 /* AppDelegate.swift */; };
 		CC5FA75026F1988B00ABA1A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FA74F26F1988B00ABA1A5 /* SceneDelegate.swift */; };
 		CC5FA75226F1988B00ABA1A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC5FA75126F1988B00ABA1A5 /* ViewController.swift */; };
@@ -40,6 +41,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		30E6984826F2403B0053B67E /* VariableConstans.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VariableConstans.swift; sourceTree = "<group>"; };
 		CC5FA74A26F1988B00ABA1A5 /* PruebaGlobalHitss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaGlobalHitss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		CC5FA74D26F1988B00ABA1A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		CC5FA74F26F1988B00ABA1A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -203,6 +205,7 @@
 			isa = PBXGroup;
 			children = (
 				CC60281826F2296600176F95 /* Extencions */,
+				30E6984826F2403B0053B67E /* VariableConstans.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -346,6 +349,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				CC5FA75226F1988B00ABA1A5 /* ViewController.swift in Sources */,
+				30E6984926F2403B0053B67E /* VariableConstans.swift in Sources */,
 				CC5FA74E26F1988B00ABA1A5 /* AppDelegate.swift in Sources */,
 				CC5FA78526F1A4A400ABA1A5 /* MovieCollectionViewCell.swift in Sources */,
 				CC60281626F21D0600176F95 /* VMListaMovies.swift in Sources */,

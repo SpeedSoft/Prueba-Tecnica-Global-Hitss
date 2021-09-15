@@ -10,7 +10,7 @@ import Foundation
 class VMListMovie : NSObject {
     
     private var apiService : APIService!
-    private(set) var empData : ResponseTopRate! {
+    private(set) var moviesData : ResponseTopRate! {
         didSet {
             self.bindListMovieViewModelToController()
         }
@@ -25,8 +25,16 @@ class VMListMovie : NSObject {
     }
     
     func getMovieData() {
-        self.apiService.apiToGetTopRateMovie { (empData) in
-            self.empData = empData
+        self.apiService.apiToGetTopRateMovie { (responseData) in
+            switch responseData{
+            case .success(let messageData):
+                self.moviesData = messageData
+            case .failure(.canNotProcessData):
+                print("Los datos no pueden ser procesados")
+            case .failure(.noDataAvailable):
+                print("el servicio no cuenta con datos")
+            }
+            
         }
     }
 }
