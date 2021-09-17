@@ -7,7 +7,7 @@
 
 import Foundation
 
-class VMListMovie : NSObject {
+class VMListMovies : NSObject {
     
     private var apiService : APIService!
     private(set) var moviesData : ResponseTopRate! {

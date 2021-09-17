@@ -7,19 +7,23 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ListMovieViewController: UIViewController {
     var movies = [Movie]()
+    var movieSelected:Movie?
     @IBOutlet weak var collectViewMovies: UICollectionView!
-    var vmListMovie = VMListMovie()
+    var vmListMovie = VMListMovies()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureView()
         bind()
     }
+    
     private func configureView(){
         collectViewMovies.dataSource = self
+        collectViewMovies.delegate = self
     }
+    
     private func bind(){
         vmListMovie.bindListMovieViewModelToController = { [weak self] () in
             DispatchQueue.main.async {
@@ -27,9 +31,16 @@ class ViewController: UIViewController {
             }
         }
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.destination is MovieDetailViewController {
+            let vc = segue.destination as? MovieDetailViewController
+            vc?.movie = sender as? Movie
+        }
+    }
 }
 
-extension ViewController:UICollectionViewDataSource{
+extension ListMovieViewController:UICollectionViewDataSource,UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if (vmListMovie.moviesData == nil){
             return 0
@@ -45,4 +56,10 @@ extension ViewController:UICollectionViewDataSource{
         cell.ImgMovie.load(url: urlMovie)
         return cell
     }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        movieSelected = vmListMovie.moviesData.results[indexPath.row]
+        performSegue(withIdentifier: "SegueDetailMovie", sender:vmListMovie.moviesData.results[indexPath.row])
+    }
+    
 }
